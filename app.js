@@ -3,9 +3,15 @@
 
 // jQuery document ready function
 $(document).ready(function(){
-    $('#clear').click( clearInput );
+    $('#clear').click( function(e){
+        e.preventDefault();
+        clearInput();
+    });
 
-    $('#scrape').click ( scrape );
+    $('#scrape').click ( function(e){
+        e.preventDefault();
+        scrape();
+    } );
 
     $('#copy').click( copy );
 });
