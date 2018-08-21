@@ -6,6 +6,8 @@ $(document).ready(function(){
     $('#clear').click( clearInput );
 
     $('#scrape').click ( scrape );
+
+    $('#copy').click( copy );
 });
 
 
@@ -54,5 +56,15 @@ function scrape(){
     // show results in the final box, and we're done
     $('#results').val( text );
 
+}
+
+
+// copy
+// copies the text to the clipboard
+function copy(){
+    let copytext = document.getElementById("results");
+    copytext.select();
+    document.execCommand("copy");
+    alert("Text copied to clipboard");
 }
 
